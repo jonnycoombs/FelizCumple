@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Birthday Card</title>
+    <title>Tarjeta de Cumpleaños</title>
     <style>
         body {
             display: flex;
@@ -40,9 +40,10 @@
             font-size: 18px;
             font-weight: bold;
             border-radius: 10px;
+            flex-direction: column;
         }
         .card-front {
-            background-color: #ffcc00;
+            background-color: #00ffd9;
             cursor: pointer;
         }
         .card-back {
@@ -57,13 +58,12 @@
 <body>
 <div class="card-container">
     <div class="card" id="birthdayCard">
-        <div class="card-front" onclick="openCard()">Click to Open</div>
+        <div class="card-front" onclick="openCard()">Haz clic para abrir</div>
         <div class="card-back">
-            <p> To [Name], </p>
-            <br>
-            <p> Happy Birthday! </p>
-            <br>
-            <p> From Jonny </p>
+            <p>Para Carlos</p>
+            <p>¡Feliz cumpleaños!</p>
+            <p>¡Espero que tengas un lindo día!</p>
+            <p>De Jonny</p>
         </div>
     </div>
 </div>
