@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Card</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f8f9fa;
+        }
+        .card-container {
+            position: relative;
+            width: 200px;
+            height: 300px;
+            perspective: 1000px;
+        }
+        .card {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            transform-style: preserve-3d;
+            transition: transform 1s;
+        }
+        .card.open {
+            transform: rotateY(180deg);
+        }
+        .card-front, .card-back {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 10px;
+        }
+        .card-front {
+            background-color: #ffcc00;
+            cursor: pointer;
+        }
+        .card-back {
+            background-color: #ffffff;
+            transform: rotateY(180deg);
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+<div class="card-container">
+    <div class="card" id="birthdayCard">
+        <div class="card-front" onclick="openCard()">Click to Open</div>
+        <div class="card-back">
+            <p>To [Name],</p>
+            <p>Happy Birthday!</p>
+            <p>From Jonny</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    function openCard() {
+        document.getElementById('birthdayCard').classList.add('open');
+    }
+</script>
+</body>
+</html>
